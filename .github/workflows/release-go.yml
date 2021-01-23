@@ -36,4 +36,4 @@ jobs:
         run: npx projen package
       - name: Release
         run: |
-          echo "hello"
+          ls -l dist/go
