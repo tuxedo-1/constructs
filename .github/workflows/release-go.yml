@@ -36,4 +36,5 @@ jobs:
         run: npx projen package
       - name: Release
         run: |
-          ls -l dist/go
+          curl -o release.sh https://raw.githubusercontent.com/aws/jsii-release/epolon/golang/bin/jsii-release-golang
+          ./release.sh dist/go/constructs
