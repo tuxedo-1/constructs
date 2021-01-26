@@ -37,4 +37,11 @@ jobs:
       - name: Release
         run: |
           curl -o release.sh https://raw.githubusercontent.com/aws/jsii-release/epolon/golang/bin/jsii-release-golang
+          chmod +x ./release.sh
           ./release.sh dist/go/constructs
+        env:
+          GITHUB_REPO: aws/constructs-go
+          GITHUB_TOKEN: ${{ secrets.PROJEN_GITHUB_TOKEN }}
+          GIT_BRANCH: epolon/jsii-release
+          VERSION: v0.0.1
+
