@@ -38,7 +38,7 @@ jobs:
         run: |
           curl -o release.sh https://raw.githubusercontent.com/aws/jsii-release/epolon/golang/bin/jsii-release-golang
           chmod +x ./release.sh
-          VERSION=$(node -p 'require("./package.json").version)' ./release.sh
+          VERSION=$(node -p 'require("./package.json").version') ./release.sh
         env:
           GITHUB_TOKEN: ${{ secrets.PROJEN_GITHUB_TOKEN }}
           GIT_BRANCH: epolon/jsii-release
