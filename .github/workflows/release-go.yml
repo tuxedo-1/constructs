@@ -40,7 +40,6 @@ jobs:
           chmod +x ./release.sh
           ./release.sh dist/go/constructs
         env:
-          GITHUB_REPO: aws/constructs-go
           GITHUB_TOKEN: ${{ secrets.PROJEN_GITHUB_TOKEN }}
           GIT_BRANCH: epolon/jsii-release
           VERSION: v0.0.1
